@@ -3,7 +3,7 @@
 #version #Running R version 4.0.1
 
 #set directory
-#setwd("")
+setwd("~/Desktop/Side_projects/Project_Nhu_Suillus_phylogenomics/")
 
 #make reproducible
 set.seed(666)
@@ -52,12 +52,14 @@ phy_iq<-make.simmap(phy_iq_rooted, x3)
 states_iq<-getStates(phy_iq,"tips")
 
 #set color pallet: 
-#(#012623 = dark green = )
-#(#035941 = light green = )
-#(#AFBF36 = lime green = )
-#(#F2622E = orange = )
-#(#F20505 = red =)
-#palette = c("#012623", "#035941", "#AFBF36", "#F2622E", "#F20505")
+#(#F2E6D8 = cream = Hard Pine)
+#(#AD8286 = light rose = Larix)
+#(#64273B = dark rose = Other)
+#(#3E4C63 = dark blue = Pseudotsuga)
+#(#82ABBA = light blue = Soft Pine)
+palette = c("#F2E6D8", "#AD8286", "#64273B", "#3E4C63", "#82ABBA")
+scales::show_col(palette); palette
+
 
 #plot IQ tree
 #fitER<-ace(states_iq,phy_iq,model="ER",type="discrete")
